@@ -19,7 +19,7 @@ function clearPause() {
 }
 
 function timeForABreak() {
-  let tomatoContainer = document.getElementById("tomatoContainer");
+  let tomatoContainer = document.getElementById("pauseContainer");
   let pauseIcon = document.createElement("div");
   pauseIcon.classList.add("pauseContainer");
   let iconLeft = document.createElement("div");
@@ -31,7 +31,7 @@ function timeForABreak() {
   tomatoContainer.append(pauseIcon);
 }
 
-// COPY PASTE
+// Chronemeter
 let startTime = 0
 let start = 0
 let end = 0
@@ -41,23 +41,19 @@ function chrono() {
   end = new Date()
   diff = end - start
   diff = new Date(diff)
-  let msec = diff.getMilliseconds()
   let sec = diff.getSeconds()
   let min = diff.getMinutes()
-  let hr = diff.getHours() - 1
-  if (min < 10) {
-    min = "0" + min
+  let minute = 29 - min
+  let seconde = 59 - sec
+  document.title = minute + ':' + seconde
+  if (minute < 10) {
+    min = "0" + minute
   }
-  if (sec < 10) {
-    sec = "0" + sec
+  if (seconde < 10) {
+    sec = "0" + seconde
   }
-  if (msec < 10) {
-    msec = "00" + msec
-  }
-  else if (msec < 100) {
-    msec = "0" + msec
-  }
-  document.getElementById("chronotime").innerHTML = hr + ":" + min + ":" + sec + ":" + msec
+  document.getElementById("chronotime").innerHTML = minute + ":" + seconde
+
   timerID = setTimeout("chrono()", 10)
 }
 function chronoStart() {
@@ -79,12 +75,12 @@ function chronoContinue() {
 }
 function chronoReset() {
   clearTomato()
-  document.getElementById("chronotime").innerHTML = "0:00:00:000"
+  document.getElementById("chronotime").innerHTML = "0:00"
   start = new Date()
 }
 function chronoStopReset() {
   clearTomato()
-  document.getElementById("chronotime").innerHTML = "0:00:00:000"
+  document.getElementById("chronotime").innerHTML = "0:00"
   document.chronoForm.startstop.onclick = chronoStart
 }
 function chronoStop() {
