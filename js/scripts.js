@@ -46,18 +46,11 @@ function chrono() {
   let minute = 29 - min
   let seconde = 59 - sec
   document.title = minute + ':' + seconde
-  if (minute < 10) {
-    min = "0" + minute
-  }
-  if (seconde < 10) {
-    sec = "0" + seconde
-  }
   document.getElementById("chronotime").innerHTML = minute + ":" + seconde
-
   timerID = setTimeout("chrono()", 10)
 }
 function chronoStart() {
-  document.chronoForm.startstop.value = "pause!"
+  document.chronoForm.startstop.value = "BREAK!"
   document.chronoForm.startstop.onclick = chronoStop
   document.chronoForm.reset.onclick = chronoReset
   start = new Date()
@@ -65,7 +58,7 @@ function chronoStart() {
   chrono()
 }
 function chronoContinue() {
-  document.chronoForm.startstop.value = "pause!"
+  document.chronoForm.startstop.value = "BREAK!"
   document.chronoForm.startstop.onclick = chronoStop
   document.chronoForm.reset.onclick = chronoReset
   start = new Date() - diff
@@ -74,18 +67,16 @@ function chronoContinue() {
   chrono()
 }
 function chronoReset() {
-  clearTomato()
   document.getElementById("chronotime").innerHTML = "0:00"
   start = new Date()
 }
 function chronoStopReset() {
-  clearTomato()
   document.getElementById("chronotime").innerHTML = "0:00"
   document.chronoForm.startstop.onclick = chronoStart
 }
 function chronoStop() {
   timeForABreak()
-  document.chronoForm.startstop.value = "start!"
+  document.chronoForm.startstop.value = "TOMATO!"
   document.chronoForm.startstop.onclick = chronoContinue
   document.chronoForm.reset.onclick = chronoStopReset
   clearTimeout(timerID)

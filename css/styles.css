@@ -14,12 +14,17 @@ body {
   width: 100vw;
 }
 
+input {
+  margin: 2rem 1rem;
+}
+
 .commandContainer {
   display: flex;
-  background-color: cadetblue;
-  justify-content: space-around;
+  background-color: green;
+  justify-content: center;
   width: 100vw;
   height: 5vh;
+  padding: 1rem;
 }
 
 #tomatoContainer {
@@ -49,5 +54,12 @@ body {
   background-color: black;
   height: 100px;
   width: 40px;
+}
+
+#chronotime {
+  font-family: Karla;
+  font-size: 3rem;
+  padding: 0.75rem;
+  color: white;
 }
 

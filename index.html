@@ -8,7 +8,7 @@
   <title>PomodoroTab</title>
   <meta name="description" content="Pomodoro Time Tracker">
   <meta name="author" content="Armoredbrain">
-
+  <link href='https://fonts.googleapis.com/css2?family=Karla&display=swap' rel='stylesheet' />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/reset.css">
 
@@ -17,13 +17,11 @@
 <body>
   <script src="js/scripts.js"></script>
   <div class="commandContainer">
-    <button onclick="addTomato()">TOMATO</button>
     <form name="chronoForm">
-      <input type="button" name="startstop" value="start!" onClick="chronoStart()" />
-      <input type="button" name="reset" value="reset!" onClick="chronoReset()" />
+      <input type="button" name="startstop" value="TOMATO!" onClick="chronoStart()" />
+      <input type="button" name="reset" value="RESET!" onClick="chronoReset()" />
     </form>
     <span id="chronotime">0:00</span>
-    <button onclick="timeForABreak()">BREAK</button>
   </div>
   <div id="tomatoContainer">
   </div>
