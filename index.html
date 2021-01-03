@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>PomodoroTab</title>
+  <meta name="description" content="Pomodoro Time Tracker">
+  <meta name="author" content="Armoredbrain">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/reset.css">
+
+</head>
+
+<body>
+  <script src="js/scripts.js"></script>
+  <div class="commandContainer">
+    <button onclick="addTomato()">TOMATO</button>
+    <form name="chronoForm">
+      <input type="button" name="startstop" value="start!" onClick="chronoStart()" />
+      <input type="button" name="reset" value="reset!" onClick="chronoReset()" />
+    </form>
+    <span id="chronotime">0:00:00:00</span>
+    <button onclick="timeForABreak()">BREAK</button>
+  </div>
+  <div id="tomatoContainer">
+  </div>
+  
+</body>
+
+</html>

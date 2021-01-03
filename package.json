@@ -1,0 +1,10 @@
+{
+  "name": "pomodorotab",
+  "version": "1.0.0",
+  "description": "Pomodoro time tracker",
+  "main": "index.html",
+  "repository": "https://github.com/Armoredbrain/pomodoroTab",
+  "author": "Armoredbrain <l1ght3rth4nl1ght@gmail.com>",
+  "license": "MIT",
+  "private": false
+}

@@ -1,0 +1,53 @@
+:root {
+  font-size: 16px;
+  font-family: "Karla";
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-white: #000000;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 300ms;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.commandContainer {
+  display: flex;
+  background-color: cadetblue;
+  justify-content: space-around;
+  width: 100vw;
+  height: 5vh;
+}
+
+#tomatoContainer {
+  background-color: green;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 95vh;
+}
+
+.tomato {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  padding: 1rem;
+}
+
+.pauseContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  width: 100px;
+}
+
+.iconPart {
+  background-color: black;
+  height: 100px;
+  width: 40px;
+}
+
